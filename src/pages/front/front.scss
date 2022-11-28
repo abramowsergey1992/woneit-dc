@@ -91,14 +91,16 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
+	height: calc(var(--vh, 1vh)*100);
 
 	img {
 
-		max-width: 495px;
+		width: 495px;
 		position: absolute;
 		left: 50%;
-		top: calc(100vh - 829px);
 		transform: translateX(-50%);
+		bottom: -37px;
+		max-width: initial;
 	}
 }
 
