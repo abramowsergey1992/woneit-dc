@@ -1,0 +1,20 @@
+body {
+	font-family: "Manrope";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #2a2a29;
+	letter-spacing: -0.02em;
+	background: linear-gradient(180deg, #B7C2CA 0%, #EEF2F3 100%);
+
+}
+
+img {
+	max-width: 100%;
+}
+
+* {
+	-webkit-box-decoration-break: clone;
+	isolation: isolate;
+}

@@ -1,0 +1,381 @@
+extends ../../layout/layout
+block title
+	title Wone It DC 
+block content
+	.screen-load.screen
+		+picture('bg','jpg').screen-load__bg
+	.screen-login.screen
+		+picture('bg','jpg').screen-login__bg
+		header.header
+			.inner.header__row
+				.logo
+					img(src="img/logo-2.svg", alt="").logo__wi
+					img(src="img/logo-circle.png", alt="").logo__circle
+		.screen-login__text Введите персональный код
+		form(action="https://2.shkolnik-shop.com/dc.php",method="post").login-form
+			.login-form__row 
+					input(type="text",name='n1')._pin-cod-mask
+					input(type="text",name='n2')._pin-cod-mask
+					input(type="text",name='n3')._pin-cod-mask
+					input(type="text",name='n4')._pin-cod-mask
+			button(type="button",disabled="disabled").login-form__sbmt Получить
+	.screen-welcome.screen
+		+picture('bg','jpg').screen-welcome__bg
+		header.header
+			.inner.header__row
+
+				.logo
+					img(src="img/logo-2.svg", alt="").logo__wi
+					img(src="img/logo-circle.png", alt="").logo__circle
+		.screen-welcome__text 
+			span.screen-welcome__gender Уважаемый
+			br
+			span.screen-welcome__name Александр Александрович
+			|!
+		.screen-welcome__body 
+			p 
+				b компания Wone  IT  поздравляет Вас 
+					br
+					| с наступающим Новым годом!
+			p Мы подготовили для Вас 
+				color поздравления 
+				| с&nbsp;возможностью выиграть крутой подарок.
+				br
+				| Все что нужно - это пройти небольшую игру.
+		.screen-welcome__footer
+			p Не забудьте включить звук
+				img(src="img/sound.svg", alt="")
+			button.screen-welcome__start Начать игру
+	.screen-game.screen
+		header.header
+			.inner.header__row
+				.logo
+					img(src="img/logo-2.svg", alt="").logo__wi
+					img(src="img/logo-circle.png", alt="").logo__circle
+				.allvideo-link
+					
+					| Все поздравления
+					img(src="img/allvideo.svg", alt="")
+		img(src="img/game-logo.svg", alt="").screen-game__logo
+		.screen-game__row
+			.screen-game__row-it Количество вращений
+			.screen-game__row-it
+				+picture('gift','jpg').screen-game__gift-icon
+				.screen-game__col-spin 4
+		.game 
+			+picture('particle','png').game__particle
+			audio(src="audio/sp.mp3").game__spin
+			audio(src="audio/Winning.mp3").game__win
+			img(src="img/d-bg.svg", alt="").game__bg
+			img(src="img/ruletka.svg", alt="").game__drum
+
+			.game__circle
+			img(src="img/arrow.svg", alt="").game__arrow
+			.game__start Крутить
+		+picture('d-1','png').screen-game__decor-1
+		+picture('d-2','png').screen-game__decor-2
+		+picture('d-3','png').screen-game__decor-3
+		+picture('d-4','png').screen-game__decor-4
+		.popup#pickgift
+			.popup__bg
+			.popup__flex.inner
+				
+					.popup__title Ура! Вы выиграли СУПЕР
+						br
+						| ПОДАРОК от Группы 
+						br
+						| Компаний Wone!
+					.popup__desc Узнайте, что же мы для вас подготовили!
+					a.gift-block.gift-link(href="#")
+						+picture('ggift','png')
+					a(href="#").gift-go.gift-link Забрать подарок
+		.popup#final
+			.popup__bg
+			.popup__flex.inner
+					header.header
+						.inner.header__row
+							.allvideo-link
+								| Все поздравления
+								img(src="img/allvideo.svg", alt="")
+					.popup__title Спасибо, 
+						br
+						| что покрутили с нами
+						br
+						| WOЛШЕБNОЕ IT КОЛЕСО! 
+					.popup__desc Утешительный приз для всех тех, кто не выиграл суперприз – на печать фотокниг, фотографий, календарей и других фотоподарков от наших партнеров «ФотоПочта». 
+					.promocode 
+						span скидка 15% по промокоду 
+						b
+							span WONEIT2023
+					.apps 
+						.apps__text Вы можете скачать приложение на телефон и сделать заказ. Акция также действует и для соседей 
+							br
+							| из Республики Беларусь)
+						.apps__row
+							a.apps__app(href='/')
+								img(src="img/appstore.svg", alt="")
+							a.apps__app(href='/')
+								img(src="img/googleplay.svg", alt="")
+	.screen-all.screen
+		header.header
+			.inner.header__row
+				.logo
+					img(src="img/logo-2.svg", alt="").logo__wi
+					img(src="img/logo-circle.png", alt="").logo__circle
+				.back-link
+					img(src="img/back-icon.svg", alt="")
+					| Назад
+		.screen-all__row.inner
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+			.video-prev(data-video="#video-14")
+				.video-prev__photo-wrap 
+					+picture('p-1','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Исполнительный директор
+				.video-prev__name Павел Чужмаров
+			.video-prev(data-video="#video-6")
+				.video-prev__photo-wrap 
+					+picture('p-2','jpg').video-prev__preview
+					img(src="img/play-icon.svg", alt="").video-prev__icon
+				.video-prev__job Генеральный директор
+				.video-prev__name Юрий Шумаков
+	.popup-video#video-1
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-2
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-4
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-5
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-7
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	
+	.popup-video#video-8
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-9
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-11
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	
+	.popup-video#video-12
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-13
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-15
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-17
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-18
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-19
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Обычное поздравления
+			.popup-video__name Юрий Шумаков 
+	
+	.popup-video#video-3
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Шуточное поздравление
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-10
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Шуточное поздравление
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-16
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Шуточное поздравление
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-6
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Генеральный директор
+			.popup-video__name Юрий Шумаков 
+	.popup-video#video-14
+		video(src="video/video.mp4").popup-video__video
+		.popup-video__flex
+			.popup-video__progress-wrap
+				.popup-video__progress
+			.popup-video__job Исполнительный директор
+			.popup-video__name Павел Чужмаров

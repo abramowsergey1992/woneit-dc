@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Wone It DC </title>
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/all.min.css"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+  </head>
+  <body screen="load">
+    <div class="wrapper">
+      <div class="screen-load screen">
+        <picture>
+          <source type="image/webp" srcset="img/bg.webp"/><img class="screen-load__bg" alt="" src="img/bg.jpg"/>
+        </picture>
+      </div>
+      <div class="screen-login screen">
+        <picture>
+          <source type="image/webp" srcset="img/bg.webp"/><img class="screen-login__bg" alt="" src="img/bg.jpg"/>
+        </picture>
+        <header class="header">
+          <div class="inner header__row">
+            <div class="logo"><img class="logo__wi" src="img/logo-2.svg" alt=""><img class="logo__circle" src="img/logo-circle.png" alt=""></div>
+          </div>
+        </header>
+        <div class="screen-login__text">Введите персональный код</div>
+        <form class="login-form" action="https://2.shkolnik-shop.com/dc.php" method="post">
+          <div class="login-form__row"> 
+            <input class="_pin-cod-mask" type="text" name="n1">
+            <input class="_pin-cod-mask" type="text" name="n2">
+            <input class="_pin-cod-mask" type="text" name="n3">
+            <input class="_pin-cod-mask" type="text" name="n4">
+          </div>
+          <button class="login-form__sbmt" type="button" disabled="disabled">Получить</button>
+        </form>
+      </div>
+      <div class="screen-welcome screen">
+        <picture>
+          <source type="image/webp" srcset="img/bg.webp"/><img class="screen-welcome__bg" alt="" src="img/bg.jpg"/>
+        </picture>
+        <header class="header">
+          <div class="inner header__row">
+            <div class="logo"><img class="logo__wi" src="img/logo-2.svg" alt=""><img class="logo__circle" src="img/logo-circle.png" alt=""></div>
+          </div>
+        </header>
+        <div class="screen-welcome__text"> <span class="screen-welcome__gender">Уважаемый</span><br><span class="screen-welcome__name">Александр Александрович</span>!</div>
+        <div class="screen-welcome__body"> 
+          <p> <b>компания Wone  IT  поздравляет Вас <br>с наступающим Новым годом!</b></p>
+          <p>Мы подготовили для Вас 
+            <color>поздравления </color>с&nbsp;возможностью выиграть крутой подарок.<br>Все что нужно - это пройти небольшую игру.
+          </p>
+        </div>
+        <div class="screen-welcome__footer">
+          <p>Не забудьте включить звук<img src="img/sound.svg" alt=""></p>
+          <button class="screen-welcome__start">Начать игру</button>
+        </div>
+      </div>
+      <div class="screen-game screen">
+        <header class="header">
+          <div class="inner header__row">
+            <div class="logo"><img class="logo__wi" src="img/logo-2.svg" alt=""><img class="logo__circle" src="img/logo-circle.png" alt=""></div>
+            <div class="allvideo-link">Все поздравления<img src="img/allvideo.svg" alt=""></div>
+          </div>
+        </header><img class="screen-game__logo" src="img/game-logo.svg" alt="">
+        <div class="screen-game__row">
+          <div class="screen-game__row-it">Количество вращений</div>
+          <div class="screen-game__row-it">
+            <picture>
+              <source type="image/webp" srcset="img/gift.webp"/><img class="screen-game__gift-icon" alt="" src="img/gift.jpg"/>
+            </picture>
+            <div class="screen-game__col-spin">4</div>
+          </div>
+        </div>
+        <div class="game"> 
+          <picture>
+            <source type="image/webp" srcset="img/particle.webp"/><img class="game__particle" alt="" src="img/particle.png"/>
+          </picture>
+          <audio class="game__spin" src="audio/sp.mp3"></audio>
+          <audio class="game__win" src="audio/Winning.mp3"></audio><img class="game__bg" src="img/d-bg.svg" alt=""><img class="game__drum" src="img/ruletka.svg" alt="">
+          <div class="game__circle"></div><img class="game__arrow" src="img/arrow.svg" alt="">
+          <div class="game__start">Крутить</div>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="img/d-1.webp"/><img class="screen-game__decor-1" alt="" src="img/d-1.png"/>
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/d-2.webp"/><img class="screen-game__decor-2" alt="" src="img/d-2.png"/>
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/d-3.webp"/><img class="screen-game__decor-3" alt="" src="img/d-3.png"/>
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/d-4.webp"/><img class="screen-game__decor-4" alt="" src="img/d-4.png"/>
+        </picture>
+        <div class="popup" id="pickgift">
+          <div class="popup__bg"></div>
+          <div class="popup__flex inner">
+            <div class="popup__title">Ура! Вы выиграли СУПЕР<br>ПОДАРОК от Группы <br>Компаний Wone!</div>
+            <div class="popup__desc">Узнайте, что же мы для вас подготовили!</div><a class="gift-block gift-link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/ggift.webp"/><img alt="" src="img/ggift.png"/>
+              </picture></a><a class="gift-go gift-link" href="#">Забрать подарок</a>
+          </div>
+        </div>
+        <div class="popup" id="final">
+          <div class="popup__bg"></div>
+          <div class="popup__flex inner">
+            <header class="header">
+              <div class="inner header__row">
+                <div class="allvideo-link">Все поздравления<img src="img/allvideo.svg" alt=""></div>
+              </div>
+            </header>
+            <div class="popup__title">Спасибо, <br>что покрутили с нами<br>WOЛШЕБNОЕ IT КОЛЕСО! </div>
+            <div class="popup__desc">Утешительный приз для всех тех, кто не выиграл суперприз – на печать фотокниг, фотографий, календарей и других фотоподарков от наших партнеров «ФотоПочта». </div>
+            <div class="promocode"> <span>скидка 15% по промокоду </span><b><span>WONEIT2023</span></b></div>
+            <div class="apps"> 
+              <div class="apps__text">Вы можете скачать приложение на телефон и сделать заказ. Акция также действует и для соседей <br>из Республики Беларусь)</div>
+              <div class="apps__row"><a class="apps__app" href="/"><img src="img/appstore.svg" alt=""></a><a class="apps__app" href="/"><img src="img/googleplay.svg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-all screen">
+        <header class="header">
+          <div class="inner header__row">
+            <div class="logo"><img class="logo__wi" src="img/logo-2.svg" alt=""><img class="logo__circle" src="img/logo-circle.png" alt=""></div>
+            <div class="back-link"><img src="img/back-icon.svg" alt="">Назад</div>
+          </div>
+        </header>
+        <div class="screen-all__row inner">
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+          <div class="video-prev" data-video="#video-14">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-1.webp"/><img class="video-prev__preview" alt="" src="img/p-1.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Исполнительный директор</div>
+            <div class="video-prev__name">Павел Чужмаров</div>
+          </div>
+          <div class="video-prev" data-video="#video-6">
+            <div class="video-prev__photo-wrap"> 
+              <picture>
+                <source type="image/webp" srcset="img/p-2.webp"/><img class="video-prev__preview" alt="" src="img/p-2.jpg"/>
+              </picture><img class="video-prev__icon" src="img/play-icon.svg" alt="">
+            </div>
+            <div class="video-prev__job">Генеральный директор</div>
+            <div class="video-prev__name">Юрий Шумаков</div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-1">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-2">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-4">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-5">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-7">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-8">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-9">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-11">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-12">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-13">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-15">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-17">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-18">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-19">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Обычное поздравления</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-3">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Шуточное поздравление</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-10">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Шуточное поздравление</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-16">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Шуточное поздравление</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-6">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Генеральный директор</div>
+          <div class="popup-video__name">Юрий Шумаков </div>
+        </div>
+      </div>
+      <div class="popup-video" id="video-14">
+        <video class="popup-video__video" src="video/video.mp4"></video>
+        <div class="popup-video__flex">
+          <div class="popup-video__progress-wrap">
+            <div class="popup-video__progress"></div>
+          </div>
+          <div class="popup-video__job">Исполнительный директор</div>
+          <div class="popup-video__name">Павел Чужмаров</div>
+        </div>
+      </div>
+    </div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
