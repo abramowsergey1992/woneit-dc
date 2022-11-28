@@ -3,9 +3,11 @@ block title
 	title Wone It DC 
 block content
 	.screen-load.screen
-		+picture('bg','jpg').screen-load__bg
+		.screen-load__bg
+			+picture('bg','jpg')
 	.screen-login.screen
-		+picture('bg','jpg').screen-login__bg
+		.screen-login__bg
+			+picture('bg','jpg')
 		header.header
 			.inner.header__row
 				.logo
@@ -20,7 +22,8 @@ block content
 					input(type="number",name='n4')._pin-cod-mask
 			button(type="button",disabled="disabled").login-form__sbmt Получить
 	.screen-welcome.screen
-		+picture('bg','jpg').screen-welcome__bg
+		.screen-welcome__bg
+			+picture('bg','jpg')
 		header.header
 			.inner.header__row
 
