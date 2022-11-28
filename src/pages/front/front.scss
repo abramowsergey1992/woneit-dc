@@ -171,7 +171,7 @@
 }
 
 .login-form {
-	background: #cfd7dd;
+
 	text-align: center;
 
 	&._error {
@@ -245,6 +245,7 @@
 		pointer-events: initial;
 	}
 
+	background: #cfd7dd;
 	padding-bottom: 49px;
 	text-align: center;
 
@@ -522,6 +523,10 @@
 		top: 50%;
 		will-change: transform;
 		transform: translateX(-50%) translateY(-50%);
+
+		@media(max-height:700px) {
+			margin-top: 40px;
+		}
 	}
 
 	&__arrow {
@@ -529,6 +534,10 @@
 		left: 50%;
 		top: 207px;
 		transform: translateX(-50%);
+
+		@media(max-height:700px) {
+			top: 240px;
+		}
 	}
 
 	&__circle {
