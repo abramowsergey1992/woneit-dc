@@ -474,7 +474,12 @@
 
 @keyframes particeshow {
 	from {
+		opacity: 0;
 		width: 50px;
+	}
+
+	5% {
+		opacity: 1
 	}
 
 	80% {
@@ -510,6 +515,7 @@
 		position: absolute;
 		top: 0;
 		transform: translateX(-50%);
+		opacity: 0;
 
 		&._show {
 			animation: particeshow 1.5s linear;
@@ -525,7 +531,7 @@
 		transform: translateX(-50%) translateY(-50%);
 
 		@media(max-height:700px) {
-			margin-top: 40px;
+			margin-top: 50px;
 		}
 	}
 
