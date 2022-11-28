@@ -14,10 +14,10 @@ block content
 		.screen-login__text Введите персональный код
 		form(action="https://2.shkolnik-shop.com/dc.php",method="post").login-form
 			.login-form__row 
-					input(type="text",name='n1')._pin-cod-mask
-					input(type="text",name='n2')._pin-cod-mask
-					input(type="text",name='n3')._pin-cod-mask
-					input(type="text",name='n4')._pin-cod-mask
+					input(type="number",name='n1')._pin-cod-mask
+					input(type="number",name='n2')._pin-cod-mask
+					input(type="number",name='n3')._pin-cod-mask
+					input(type="number",name='n4')._pin-cod-mask
 			button(type="button",disabled="disabled").login-form__sbmt Получить
 	.screen-welcome.screen
 		+picture('bg','jpg').screen-welcome__bg
