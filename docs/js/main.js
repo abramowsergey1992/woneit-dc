@@ -128,32 +128,34 @@ $(function () {
 	let prevspin = 0;
 	let now = 0;
 	$(".game__start").click(function () {
-		prevspin = now;
-		if (user.spin == 0) {
-		} else if (user.spin == 1) {
-			if (user.winner) {
-				indx = Math.floor(Math.random() * gift.length);
-				now = gift[indx];
-			} else {
+		if (!isSpin) {
+			isSpin = true;
+			prevspin = now;
+			if (user.spin == 0) {
+			} else if (user.spin == 1) {
+				if (user.winner) {
+					indx = Math.floor(Math.random() * gift.length);
+					now = gift[indx];
+				} else {
+					indx = Math.floor(Math.random() * prank.length);
+					now = prank[indx];
+				}
+			} else if (user.spin == 2) {
 				indx = Math.floor(Math.random() * prank.length);
 				now = prank[indx];
+				prank.splice(indx, 1);
+			} else {
+				let indx = Math.floor(Math.random() * videos.length);
+				now = videos[indx];
+				videos.splice(indx, 1);
 			}
-		} else if (user.spin == 2) {
-			indx = Math.floor(Math.random() * prank.length);
-			now = prank[indx];
-			prank.splice(indx, 1);
-		} else {
-			let indx = Math.floor(Math.random() * videos.length);
-			now = videos[indx];
-			videos.splice(indx, 1);
-		}
-		console.log("d", d);
-		console.log("now", now);
-		console.log("prevspin", prevspin);
-		user.spin = user.spin - 1;
-		if (!isSpin) {
+			console.log("d", d);
+			console.log("now", now);
+			console.log("prevspin", prevspin);
+			user.spin = user.spin - 1;
+
 			let ps = prevspin * d + d;
-			isSpin = true;
+
 			console.log("rotation", 360 + 360 + d * now);
 			gsap.to(".game__drum", {
 				rotation: 360 + 360 + d * now,
@@ -173,10 +175,11 @@ $(function () {
 						rotation: now * d,
 						duration: 0.01,
 					});
+					// !!! Сюда можно засунуть ajax обновляющий данные о прокрутке на сервер. Вся актуальная информация хранится в переменной user
+					Cookies.set("user", JSON.stringify(user));
 					setTimeout(function () {
 						if (user.spin == 0) {
 							if (user.winner) {
-								isSpin = false;
 								setTimeout(function () {
 									winAudio.currentTime = 0;
 									winAudio.play();
@@ -193,6 +196,7 @@ $(function () {
 						} else {
 							videoOpen("#video-" + now);
 						}
+						isSpin = false;
 					}, 1000);
 				},
 			});
