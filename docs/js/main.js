@@ -8,6 +8,9 @@ window.addEventListener("orientationchange", () => {
 });
 
 $(function () {
+	setTimeout(function () {
+		$(".logo").addClass("_anim");
+	}, 200);
 	let user;
 	if (Cookies.get("user")) {
 		user = JSON.parse(Cookies.get("user"));
@@ -23,9 +26,6 @@ $(function () {
 		}
 	} else {
 		$("body").attr("screen", "login");
-		setTimeout(function () {
-			$(".logo").addClass("_anim");
-		}, 200);
 	}
 	$(".screen-welcome__start").click(function () {
 		$("body").attr("screen", "game");
@@ -168,7 +168,7 @@ $(function () {
 			console.log("rotation", 360 + 360 + d * now);
 			gsap.to(".game__drum", {
 				rotation: 360 + 360 + d * now,
-				duration: 3.3,
+				duration: 9,
 				ease: "out.power4",
 				onUpdate: function () {
 					let n = gsap.getProperty(this.targets()[0], "rotate");
@@ -237,12 +237,12 @@ $(function () {
 		videoOpen($(this).data("video"));
 	});
 
-	$(".popup-video").click(function () {
-		let video = $(this).find("video")[0];
-		if (!video.paused) {
-			video.pause();
-		} else {
-			video.play();
-		}
-	});
+	// $(".popup-video").click(function () {
+	// 	let video = $(this).find("video")[0];
+	// 	if (!video.paused) {
+	// 		video.pause();
+	// 	} else {
+	// 		video.play();
+	// 	}
+	// });
 });

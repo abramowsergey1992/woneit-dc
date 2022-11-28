@@ -94,8 +94,8 @@
 	height: calc(var(--vh, 1vh)*100);
 
 	img {
-
-		width: 495px;
+		width: 100%;
+		min-width: 495px;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -105,6 +105,8 @@
 }
 
 .screen-load {
+	background: #cfd7dd;
+
 	[screen="load"] & {
 		opacity: 1;
 		pointer-events: initial;
@@ -128,6 +130,8 @@
 }
 
 .screen-login {
+	background: #cfd7dd;
+
 	[screen="login"] & {
 		opacity: 1;
 		pointer-events: initial;
@@ -151,7 +155,7 @@
 
 	&__text {
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 23px;
 		line-height: 28px;
 		/* identical to box height, or 117% */
 
@@ -167,6 +171,7 @@
 }
 
 .login-form {
+	background: #cfd7dd;
 	text-align: center;
 
 	&._error {
@@ -195,7 +200,7 @@
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 20px;
-		padding: 10px 20px;
+		padding: 9px 20px;
 		text-align: center;
 		letter-spacing: -0.03em;
 
@@ -203,7 +208,7 @@
 		background: #FFFFFF;
 		border: 2px solid #283844;
 		box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-		border-radius: 20px;
+		border-radius: 40px;
 		margin-left: auto;
 		margin-right: auto;
 		transition: opacity 0.5s;
@@ -265,7 +270,7 @@
 
 	&__text {
 		font-weight: 800;
-		font-size: 20px;
+		font-size: 19px;
 		line-height: 140%;
 		margin-bottom: 10px;
 
@@ -279,9 +284,11 @@
 	&__body {
 		font-weight: 400;
 		font-size: 14px;
-		line-height: 171%;
+		line-height: 157%;
 		text-align: center;
 		letter-spacing: -0.03em;
+		padding-left: 20px;
+		padding-right: 20px;
 
 		p {
 			margin-bottom: 10px;
@@ -303,18 +310,49 @@
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 20px;
-		padding: 10px 20px;
+
 		text-align: center;
 		letter-spacing: -0.03em;
 
-		color: rgba(174, 43, 22, 1);
-		background: #FFFFFF;
-		border: 2px solid rgba(174, 43, 22, 1);
+
+		padding: 2px;
+		border: 0 solid;
 		box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-		border-radius: 20px;
+		border-radius: 50px;
 		margin-left: auto;
 		margin-right: auto;
 		transition: opacity 0.3s;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			display: block;
+			content: '';
+			border-radius: 50px;
+			width: calc(100% - 4px);
+			height: calc(100% - 4px);
+			background: #fff;
+
+			left: 2px;
+			top: 2px;
+		}
+
+		span {
+			padding: 9px 20px;
+			position: relative;
+			display: block;
+			background: linear-gradient(16.06deg, #AE2B16 11.55%, #FF3F20 78.68%);
+		}
+
+		span {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+
+
+		background: linear-gradient(16.06deg, #AE2B16 11.55%, #FF3F20 78.68%);
 
 		&[disabled] {
 			opacity: 0;
@@ -326,7 +364,7 @@
 
 		p {
 			font-weight: 500;
-			font-size: 14px;
+			font-size: 13px;
 			line-height: 24px;
 			/* identical to box height, or 171% */
 
@@ -369,6 +407,7 @@
 		margin: auto;
 		margin-top: 35px;
 		margin-bottom: 18px;
+		display: block;
 	}
 
 	&__row {
@@ -386,7 +425,7 @@
 			background: linear-gradient(150.59deg, rgba(255, 255, 255, 0.45) 17.37%, rgba(255, 255, 255, 0) 101.21%, rgba(255, 255, 255, 0) 101.21%);
 			backdrop-filter: blur(3.10963px);
 			font-weight: 700;
-			font-size: 18px;
+			font-size: 17px;
 			line-height: 25px;
 			display: flex;
 			flex-direction: row;
