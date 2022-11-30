@@ -14,6 +14,7 @@ $(function () {
 	let user;
 	if (Cookies.get("user")) {
 		user = JSON.parse(Cookies.get("user"));
+		console.log("spin", user);
 		$("body").attr("screen", "game");
 		$(".screen-game__col-spin").text(user.spin);
 		$(".gift-link").attr("href", user.giftlink);
@@ -100,6 +101,8 @@ $(function () {
 					if (data.status == "success") {
 						Cookies.set("user", JSON.stringify(data.user));
 						user = data.user;
+						console.log(user);
+						$(".screen-game__col-spin").text(user.spin);
 						$("body").attr("screen", "welcome");
 						if (user.gender == "male") {
 							$(".screen-welcome__gender").text("Уважаемый");
@@ -126,6 +129,33 @@ $(function () {
 			});
 		});
 
+	// создаем аудио контекст
+	var context = new window.AudioContext(); //
+	// переменные для буфера, источника и получателя
+	var buffer, source, destination;
+
+	// функция для подгрузки файла в буфер
+	var loadSoundFile = function (url) {
+		// делаем XMLHttpRequest (AJAX) на сервер
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.responseType = "arraybuffer"; // важно
+		xhr.onload = function (e) {
+			// декодируем бинарный ответ
+			context.decodeAudioData(
+				this.response,
+				function (decodedArrayBuffer) {
+					// получаем декодированный буфер
+					buffer = decodedArrayBuffer;
+				},
+				function (e) {
+					console.log("Error decoding file", e);
+				}
+			);
+		};
+		xhr.send();
+	};
+	loadSoundFile("audio/sp.mp3");
 	let d = 360 / 20;
 	let spinAudio = $(".game__spin")[0];
 	let winAudio = $(".game__win")[0];
@@ -175,8 +205,22 @@ $(function () {
 
 					if (n >= ps) {
 						ps = ps + d;
-						spinAudio.currentTime = 0;
-						spinAudio.play();
+						// spinAudio.currentTime = 0;
+						// spinAudio.pause();
+						// spinAudio.play();
+
+						// функция начала воспроизведения
+
+						// создаем источник
+						source = context.createBufferSource();
+						// подключаем буфер к источнику
+						source.buffer = buffer;
+						// дефолтный получатель звука
+						destination = context.destination;
+						// подключаем источник к получателю
+						source.connect(destination);
+						// воспроизводим
+						source.start(0);
 					}
 				},
 				onComplete: function () {
@@ -215,20 +259,24 @@ $(function () {
 		console.log("user", user);
 	});
 	function videoOpen(id) {
+		console.log("video", id);
 		let videowrap = $(id);
 		let video = videowrap.find(".popup-video__video")[0];
 		let progress = videowrap.find(".popup-video__progress");
-		videowrap.fadeIn(function () {
+		videowrap.addClass("_open");
+		setTimeout(() => {
 			video.play();
-		});
-
+		}, 400);
 		video.addEventListener("ended", function () {
-			$(".popup-video").fadeOut();
+			videowrap.removeClass("_open");
 		});
 		video.addEventListener("timeupdate", function () {
 			if (!isNaN(this.duration)) {
 				var percent_complete = 100 * (this.currentTime / this.duration);
 				progress.css("width", percent_complete + "%");
+				if (percent_complete > 99.8) {
+					videowrap.removeClass("_open");
+				}
 			}
 		});
 	}

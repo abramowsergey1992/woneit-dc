@@ -93,14 +93,26 @@
 	height: 100%;
 	height: calc(var(--vh, 1vh)*100);
 
+	&::before {
+		background: #f5f6f8;
+		width: 100%;
+		height: 300px;
+		display: block;
+		content: '';
+		left: 0;
+		bottom: 0;
+		position: absolute;
+	}
+
 	img {
 		width: 100%;
-		min-width: 495px;
 		position: absolute;
 		left: 50%;
+		max-width: 495px;
+		height: initial;
+
 		transform: translateX(-50%);
-		bottom: -37px;
-		max-width: initial;
+		bottom: 135px;
 	}
 }
 
@@ -527,11 +539,130 @@
 		max-width: initial;
 		left: 50%;
 		top: 50%;
+		width: 1032px;
+		height: 1032px;
 		will-change: transform;
 		transform: translateX(-50%) translateY(-50%);
 
 		@media(max-height:700px) {
 			margin-top: 50px;
+		}
+
+		&-it {
+			height: 100%;
+			width: 100px;
+			left: 50%;
+			margin-left: -50px;
+			position: absolute;
+
+			&._video {
+				img {
+					filter: blur(5px);
+				}
+			}
+
+			&:nth-child(2) {
+				transform: rotate(-18deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-36deg);
+			}
+
+			&:nth-child(4) {
+				transform: rotate(-54deg);
+			}
+
+			&:nth-child(5) {
+				transform: rotate(-72deg);
+			}
+
+			&:nth-child(6) {
+				transform: rotate(-91deg);
+			}
+
+			&:nth-child(7) {
+				transform: rotate(-109deg);
+			}
+
+			&:nth-child(8) {
+				transform: rotate(-127deg);
+			}
+
+			&:nth-child(9) {
+				transform: rotate(-144deg);
+			}
+
+			&:nth-child(10) {
+				transform: rotate(-162deg);
+			}
+
+			&:nth-child(11) {
+				transform: rotate(-180deg);
+			}
+
+			&:nth-child(12) {
+				transform: rotate(-198deg);
+			}
+
+			&:nth-child(13) {
+				transform: rotate(-216deg);
+			}
+
+			&:nth-child(14) {
+				transform: rotate(-234deg);
+			}
+
+			&:nth-child(15) {
+				transform: rotate(-252deg);
+			}
+
+			&:nth-child(16) {
+				transform: rotate(-270deg);
+			}
+
+			&:nth-child(17) {
+				transform: rotate(-288deg);
+			}
+
+			&:nth-child(18) {
+				transform: rotate(-306deg);
+			}
+
+			&:nth-child(19) {
+				transform: rotate(-324deg);
+			}
+
+			&:nth-child(20) {
+				transform: rotate(-342deg);
+			}
+
+
+
+			img {}
+
+			picture {
+				overflow: hidden;
+				line-height: 0;
+				width: 100px;
+				height: 178px;
+				border-radius: 20px;
+				position: relative;
+				display: block;
+				box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+
+				&::after {
+					display: block;
+					content: '';
+					width: 31px;
+					height: 31px;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.583 11.24L14.1377 10.4079C13.8308 10.2034 13.4363 10.1843 13.1111 10.3583C12.786 10.5323 12.583 10.8712 12.583 11.24H13.583ZM13.583 19.24H12.583C12.583 19.6088 12.786 19.9476 13.1112 20.1217C13.4363 20.2957 13.8309 20.2766 14.1377 20.072L13.583 19.24ZM19.583 15.24L20.1377 16.072C20.4159 15.8866 20.583 15.5743 20.583 15.24C20.583 14.9056 20.4159 14.5934 20.1377 14.4079L19.583 15.24ZM15.583 28.24C8.40333 28.24 2.58304 22.4197 2.58303 15.24H0.583027C0.583038 23.5243 7.29876 30.24 15.583 30.24L15.583 28.24ZM28.583 15.24C28.583 22.4197 22.7627 28.24 15.583 28.24L15.583 30.24C23.8673 30.24 30.583 23.5243 30.583 15.24H28.583ZM15.583 2.23999C22.7627 2.23999 28.583 8.06029 28.583 15.24H30.583C30.583 6.95572 23.8672 0.23999 15.583 0.23999L15.583 2.23999ZM15.583 0.23999C7.29872 0.23999 0.583015 6.95572 0.583027 15.24H2.58303C2.58302 8.06029 8.4033 2.23999 15.583 2.23999L15.583 0.23999ZM12.583 11.24L12.583 19.24H14.583L14.583 11.24H12.583ZM14.1377 20.072L20.1377 16.072L19.0283 14.4079L13.0283 18.4079L14.1377 20.072ZM20.1377 14.4079L14.1377 10.4079L13.0283 12.072L19.0283 16.072L20.1377 14.4079Z' fill='white'/%3E%3C/svg%3E%0A");
+					transform: translateX(-50%) translateY(-50%);
+				}
+			}
 		}
 	}
 
@@ -670,9 +801,16 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 0.001;
+	z-index: -1;
+	transition: opacity 0.4s;
 
-	display: none;
 	color: #fff;
+
+	&._open {
+		opacity: 1;
+		z-index: 100;
+	}
 
 	&__flex {
 		position: absolute;
@@ -684,6 +822,7 @@
 		flex-direction: column;
 		padding: 28px 20px;
 		z-index: 3;
+		pointer-events: none;
 		justify-content: flex-end;
 	}
 
@@ -868,6 +1007,10 @@
 	justify-content: center;
 	transform: translateX(-50%);
 	color: #FFFFFF;
+
+	@media(max-height: 700px) {
+		bottom: 17px;
+	}
 }
 
 .promocode {
