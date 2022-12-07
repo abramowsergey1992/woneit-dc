@@ -195,9 +195,9 @@ $(function () {
 
 			let ps = prevspin * d + d;
 
-			console.log("rotation", 360 + 360 + d * now);
+			console.log("rotation", 360 + d * now);
 			gsap.to(".game__drum", {
-				rotation: 360 + 360 + d * now,
+				rotation: 360 + d * now,
 				duration: 9,
 				ease: "out.power4",
 				onUpdate: function () {

@@ -542,12 +542,12 @@
 		top: 50%;
 		width: 1032px;
 		height: 1032px;
-		margin-left: calc(1032px / 2 * -1);
-		margin-top: calc(1032px / 2 * -1);
+		margin-left: -516px;
+		margin-top: -516px;
 		will-change: transform;
 
 		@media(max-height:700px) {
-			margin-top: 50px;
+			margin-top: -481px;
 		}
 
 		img {}
