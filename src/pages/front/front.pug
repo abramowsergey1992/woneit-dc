@@ -68,10 +68,11 @@ block content
 				+picture('gift','jpg').screen-game__gift-icon
 				.screen-game__col-spin 5
 		.game 
-			+picture('particle','png').game__particle
+			
 			audio(src="audio/sp.mp3").game__spin
 			audio(src="audio/Winning.mp3").game__win
-			img(src="img/d-bg.svg", alt="").game__bg
+			+picture("d",'png').game__bg
+			+picture('particle','png').game__particle
 			.game__drum
 				.game__drum-it
 					+picture('r-1','jpg')

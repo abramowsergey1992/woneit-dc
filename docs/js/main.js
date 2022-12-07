@@ -196,14 +196,19 @@ $(function () {
 			let ps = prevspin * d + d;
 
 			console.log("rotation", 360 + d * now);
+			play = false;
 			gsap.to(".game__drum", {
-				rotation: 360 + d * now,
-				duration: 9,
-				ease: "out.power4",
+				rotation: 360 + 360 + d * now,
+				z: 1,
+				duration: 11,
 				onUpdate: function () {
 					let n = gsap.getProperty(this.targets()[0], "rotate");
 
-					if (n >= ps) {
+					if (n >= ps && !play) {
+						play = true;
+						setTimeout(function () {
+							play = false;
+						}, 90);
 						ps = ps + d;
 						// spinAudio.currentTime = 0;
 						// spinAudio.pause();
